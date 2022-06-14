@@ -10,7 +10,7 @@ int socket(int domain, int type, int protocol)
 
 2. 参数type指定通信特征
 + SOCK_STREAM(有序、可靠、双向、面向连接的字节流)
-+ SOCK_DGRAM(固定长度、不可靠、无连接的报文船体)
++ SOCK_DGRAM(固定长度、不可靠、无连接的报文传递)
 
 3. 参数protocol一般都是0
 当protocol指定为0时，函数会自动选择匹配的默认协议。(但有时你可能也会想自己指定协议)
