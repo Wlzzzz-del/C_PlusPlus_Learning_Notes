@@ -38,6 +38,8 @@ int Socket(const char *host, int clientPort)
 
 		// hostent是gethostbyname的返回值
 		// gethostbyname用来解析域名，将域名转换为IP地址
+		// 该接口已经被弃用，因为仅支持ipv4协议。
+		// 新接口支持ipv4\ipv6与其他协议。
     struct hostent *hp;
     
     memset(&ad, 0, sizeof(ad));
@@ -61,6 +63,7 @@ int Socket(const char *host, int clientPort)
     ad.sin_port = htons(clientPort);
     
 		// 建立socket
+		// socket返回文件描述符id。fid
     sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock < 0)
         return sock;

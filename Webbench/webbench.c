@@ -397,8 +397,8 @@ static int bench(void)
 		   正值：返回新创建的进程的PID */
     for(i=0;i<clients;i++)
     {
-        pid=fork();
-        if(pid <= (pid_t) 0)
+        pid=fork();// !!!子进程会fork,clients是不是少开根号?!!!
+        if(pid <= (pid_t) 0)// 类型强制转换
         {
             /* child process or error*/
 								/* wlz:sleep让进程挂起1s */
