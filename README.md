@@ -19,5 +19,6 @@
 ## Webbench 源码学习
 2022/5/23————2022/5/27
 学习[Webbench源码](https://github.com/EZLippi/WebBench)，并作了部分注释和笔记  
-留个坑：未来自己实现一遍
+2022/6/1————2022/7/1
+使用C++基于多线程、互斥锁[实现Webbench](https://github.com/Wlzzzz-del/Webbench_bycpp)
 
